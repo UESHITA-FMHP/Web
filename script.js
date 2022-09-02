@@ -9,7 +9,7 @@ const imgtotal = 4,
 
 let slidenum = 1;
 
-activeimgelement.setAttribute('src', 'https://raw.githubusercontent.com/account0125/imgslide/main/img/img-1-A.JPG')
+activeimgelement.setAttribute('url', 'https://raw.githubusercontent.com/account0125/imgslide/main/img/img-1-A.JPG')
 imgdataelement.textContent =`8/${slidenum}`
 
 for (let i; i < imgtotal; i++) {
