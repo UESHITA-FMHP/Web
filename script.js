@@ -21,7 +21,7 @@ for (let i; i < imgtotal; i++) {
 previmgelement.addEventListener('click', () => {
     if (slidenum !== 1) {
         slidenum--
-        activeimgelement.setAttribute('src', `./img/img-${slidenum}-A.jpg`)
+        activeimgelement.setAttribute('src', `img/img-${slidenum}-A.jpg`)
         imgdataelement.textContent =`8/${slidenum}`
     }
 })
