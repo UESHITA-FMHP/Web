@@ -34,7 +34,7 @@ body {
     justify-content: space-between;
 }
 
-.opboader-buttons div{
+.opboader-button {
     padding: 1rem;
     background-color: aquamarine;
 }
