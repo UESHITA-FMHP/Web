@@ -1,0 +1,45 @@
+body {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.imgslide {
+    margin: 0 auto;
+    margin-top:2rem;
+    width: 80%;
+    max-width: 600px;
+    height: 100%;
+}
+
+.opboard {
+    width: 100%;
+}
+
+.opboard-title {
+    text-align:  center;
+    margin: 1rem 0;
+    font-size: 3.5rem;
+}
+
+.imgdata {
+    text-align:  center;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.opboader-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opboader-buttons div{
+    padding: 1rem;
+    background-color: aquamarine;
+}
+
+.activeimg {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/971ea0dac0.js" crossorigin="anonymous"></script>
+    <title>スライド</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="imgslide">
+        <div class="opboard">
+            <div class="opboard-title">
+                <h1>○○集</h1>
+            </div>
+            <div id="imgdata" class="imgdata"></div>
+            <div class="opboader-buttons">
+                <div id="previmg" class="previmg">
+                    <div class="fa-solid fa-arrow-left"></div>
+                </div>
+                <div id="beforeimg" class="beforeimg">
+                    <div class="fa-thin fa-solid fa-q"></div>
+                </div>
+                <div id="afterimg" class="afterimg">
+                    <div class="fa-thin fa-solid fa-a"></div>
+                </div>
+                <div id="nextimg" class="nextimg">
+                    <div class="fa-solid fa-arrow-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="activeimg">
+            <img id="activeimg-img">
+        </div>
+        <ul id="imglist" class="imglist"></ul>
+    </div>
+</body>
+
+</html>
