@@ -12,12 +12,6 @@ let slidenum = 1;
 activeimgelement.setAttribute('src', 'https://raw.githubusercontent.com/account0125/imgslide/main/img/img-1-A.jpg')
 imgdataelement.textContent =`8/${slidenum}`
 
-for (let i; i < imgtotal; i++) {
-    const lielement = document.createElement('li')
-    lielement.style.backgroundImage = `url(https://raw.githubusercontent.com/account0125/imgslide/main/img/img-${i + 1}-A.jpg)`
-    imglistelement.appendChild(lielement)
-}
-
 previmgelement.addEventListener('click', () => {
     if (slidenum !== 1) {
         slidenum--
