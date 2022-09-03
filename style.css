@@ -1,4 +1,10 @@
+@font-face {
+  font-family: 'Myfont';
+  src: url(nicoca_v1.ttf);
+}
+
 body {
+    font-family: Myfont;
     width: 100%;
     background-color: rgb(255, 255, 255);
     color: black;
