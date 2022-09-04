@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Myfont';
+    src: url(https://raw.githubusercontent.com/account0125/imgslide/main/nicoca_v1.ttf);
+}
+
+html {
+    font-family: Myfont;
+    background-color: #d6e9ca;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    z-index:1;
+    width: 100%;
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    background-color: #d6e9ca;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.header {
+    margin: 0 auto;
+    width: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo-img {
+    height: 5vh;
+}
+
+.header-nav {
+    width: 45%;
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 80%;
+}
+
+.header-nav-list li {
+    width: 100%;
+    text-align: center;
+    line-height: 7vh;
+}
+
+.header-nav-list li:hover {
+    background-color: #a3d187;
+}
+
+.header-nav-list a {
+    transform: rotate(0.03deg);
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+.header-nav-list a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+main {
+    padding-top: 7vh;
+}
+
+.imgslide {
+    height: 100%;
+    margin: 1.5rem auto;
+}
+
+.opboard {
+    width: 100%;
+    height: 100%;
+}
+
+.opboard-str {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.opboard-str h1 {
+    font-size: 2rem;
+}
+
+.imgdata {
+    text-align: center;
+    margin: 1rem 1.5rem 1rem 1rem;
+    font-size: 2rem;
+}
+
+.opboard-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switchimg {
+    width: 4%;
+    position: relative;
+    padding: 1.5rem 5rem;
+    font-size: 1rem;
+}
+
+.switchimg:hover {
+    background-color: #a3d187;
+}
+
+.switchimg p{
+    position: absolute;
+    left: 50%;
+	top:50%;
+    transform:translate(-50%,-50%)rotate(0.03deg);
+}
+
+.imgslidemain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgslidemain-button {
+    position: relative;
+    text-align: center;
+    width: 10%;
+}
+
+.imgslidemain-button:hover {
+    font-size: 200%;
+    transition: .2s all
+}
+
+.imgslidemain-button p{
+    position: absolute;
+    left: 50%;
+	top:50%;
+    transform:translate(-50%,-50%)rotate(0.03deg);
+}
+
+.activeimg {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.activeimg-img {
+    width: 100%;
+}

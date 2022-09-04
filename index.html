@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://kit.fontawesome.com/971ea0dac0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>スライド</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <img class="header-logo-img"
+                    src="https://raw.githubusercontent.com/account0125/imgslide/main/img/img-header-logo.PNG">
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li>
+                        <a href="">PROFILE.</a>
+                    </li>
+                    <li>
+                        <a href="">SNS.</a>
+                    </li>
+                    <li>
+                        <a href="">TOPICS.</a>
+                    </li>
+                    <li>
+                        <a href="">OTHER.</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="imgslide">
+            <div class="opboard">
+                <div class="opboard-str">
+                    <h1 class=opboard-left>令和4年8月 スタンプラリー画像集</h1>
+                    <div class=opboard-right>
+                        <div id="imgdata" class="imgdata"></div>
+                        <div id="switchimg" class="switchimg">
+                            <p class="switchimg-button">答えを表示</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgslidemain">
+                    <div id="previmg" class="previmg imgslidemain-button">
+                        <p>←</p>
+                    </div>
+                    <div class="activeimg">
+                        <img class="activeimg-img" id="activeimg-img">
+                    </div>
+                    <div id="nextimg" class="nextimg imgslidemain-button">
+                        <p>→</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
