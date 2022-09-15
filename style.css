@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Myfont';
-    src: url(https://raw.githubusercontent.com/account0125/imgslide/main/nicoca_v1.ttf);
+    src: url(https://raw.githubusercontent.com/account0125/Web-File/main/nicoca_v1.ttf);
 }
 
 html {
@@ -13,10 +13,72 @@ body {
     width: 100%;
 }
 
-header {
-    z-index:1;
+
+
+
+
+
+
+
+
+
+
+
+
+.loader-content {
+    z-index: 20;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    height: 100dvh;
+    top: 50vh;
+    top: 50dvh;
+    left: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.loader-img {
+    width: 40vw;
+}
+
+.loader-content-img {
+    width: 100%;
+}
+
+.loaded {
+    opacity: 0;
+    transition: all .5s;
+}
+
+.notloader {
+    opacity: 0;
+}
+
+.endloaded {
+    opacity: 1;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-parent {
+    z-index: 10;
     width: 100%;
     height: 7vh;
+    height: 7dvh;
     position: fixed;
     top: 0;
     background-color: #d6e9ca;
@@ -24,15 +86,17 @@ header {
 }
 
 .header {
+    height: 100%;
     margin: 0 auto;
-    width: 92%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
 }
 
 .header-logo {
-    height: 50%;
+    margin-left: 4%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -41,23 +105,26 @@ header {
 
 .header-logo-img {
     height: 5vh;
+    height: 5dvh;
 }
 
 .header-nav {
     width: 45%;
+    max-width: 500px;
+    margin-right: 1%;
 }
 
 .header-nav-list {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 80%;
 }
 
 .header-nav-list li {
     width: 100%;
     text-align: center;
     line-height: 7vh;
+    line-height: 7dvh;
 }
 
 .header-nav-list li:hover {
@@ -65,6 +132,7 @@ header {
 }
 
 .header-nav-list a {
+    font-size: 80%;
     transform: rotate(0.03deg);
     display: block;
     color: rgb(0, 0, 0);
@@ -77,93 +145,222 @@ header {
 
 
 
-main {
-    padding-top: 7vh;
-}
+
+
+
+
+
+
+
 
 .imgslide {
-    height: 100%;
+    margin-top: 11vh;
+    margin-top: 11dvh;
+    text-align: center;
+    user-select: none;
+}
+
+.slide-title {
     margin: 1.5rem auto;
+    font-size: 5vmin;
 }
 
-.opboard {
+.swiper {
+    width: 100%;
+    max-width: 1000px;
+    height: 70vh;
+    height: 70dvh;
+}
+
+.swiper-wrapper {
     width: 100%;
     height: 100%;
+    color: white;
 }
 
-.opboard-str {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.opboard-str h1 {
-    font-size: 2rem;
-}
-
-.imgdata {
-    text-align: center;
-    margin: 1rem 1.5rem 1rem 1rem;
-    font-size: 2rem;
-}
-
-.opboard-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.switchimg {
-    width: 4%;
-    position: relative;
-    padding: 1.5rem 5rem;
-    font-size: 1rem;
-}
-
-.switchimg:hover {
-    background-color: #a3d187;
-}
-
-.switchimg p{
-    position: absolute;
-    left: 50%;
-	top:50%;
-    transform:translate(-50%,-50%)rotate(0.03deg);
-}
-
-.imgslidemain {
+.swiper-slide {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-}
-
-.imgslidemain-button {
     position: relative;
-    text-align: center;
-    width: 10%;
+    overflow: hidden;
 }
 
-.imgslidemain-button:hover {
-    font-size: 200%;
-    transition: .2s all
-}
-
-.imgslidemain-button p{
-    position: absolute;
-    left: 50%;
-	top:50%;
-    transform:translate(-50%,-50%)rotate(0.03deg);
-}
-
-.activeimg {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-}
-
-.activeimg-img {
+.background-img {
+    z-index: -1;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+}
+
+.swiper-slide-title {
+    margin-bottom: .5rem;
+}
+
+.swiper-slide-txt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.swiper-slide-txt h1 {
+    padding-bottom:1rem ;
+}
+
+.swiper-slide-txt a {
+    padding: 1rem;
+}
+
+.swiper-slide-click {
+    color: white;
+    text-decoration: none;
+}
+
+.swiper-area {
+    position: relative;
+}
+
+.swiper-button-prev {
+    position:absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 8vmax;
+    max-width: 80px;
+    height: 15vmax;
+    max-height: 200px;
+    border-radius: 6rem;
+    background-color: #ffffff30;
+    color: #ffffff;
+}
+
+.swiper-button-next {
+    position:absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 8vmax;
+    max-width: 80px;
+    height: 15vmax;
+    max-height: 200px;
+    border-radius: 6rem;
+    background-color: #ffffff30;
+    color: #ffffff;
+}
+
+.swiper-button-disabled {
+    opacity: 0.1;
+}
+
+
+
+
+
+
+
+.imgpopup {
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    visibility: hidden;
+}
+
+.imgpopup-contents {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.blackback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000d3;
+}
+
+.answerbtn {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 5%;
+    left: 10%;
+    width: 15vw;
+    height: 5vh;
+    height: 5dvh;
+    border: 1px solid rgb(175, 175, 175);
+    display: flex;
+    overflow: hidden;
+}
+
+.answerbtn  a{
+    color: rgb(175, 175, 175);
+    font-size: 3vmin;
+    text-decoration: none;
+    width: 15vw;
+    line-height: 5vh;
+    line-height: 5dvh;
+    background-color: #000000;
+    text-align: center;
+}
+
+.closebtn {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 5%;
+    right: 10%;
+    width: 15vw;
+    height: 5vh;
+    height: 5dvh;
+    border: 1px solid rgb(175, 175, 175);
+    display: flex;
+    overflow: hidden;
+}
+
+.closebtn a {
+    color: rgb(175, 175, 175);
+    font-size: 3vmin;
+    text-decoration: none;
+    width: 15vw;
+    line-height: 5vh;
+    line-height: 5dvh;
+    background-color: #000000;
+    text-align: center;
+}
+
+.imgpopup-img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 52.5%;
+    left: 50%;
+    width: 80%;
+    height: 85vh;
+    height: 85dvh;
+    max-height: 85vh;
+    max-height: 85dvh;
+    object-fit: contain;
+}
+
+
+
+
+@media screen and (max-width: 599px) {
+    .swiper-button-prev {
+        visibility: hidden;
+    }
+    
+    .swiper-button-next {
+        visibility: hidden;
+    }
+
+    .swiper {
+        width: 100%;
+        max-width: 1000px;
+        height: 80vh;
+        height: 80dvh;
+    }
 }
