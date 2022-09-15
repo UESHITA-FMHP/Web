@@ -9,8 +9,25 @@ const swiper = new Swiper('.swiper', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+    },
 });
+
+const burgerelement = document.getElementById("burger");
+const headernavlistelement = document.getElementById("header-nav-list");
+const headernavlistlielement =document.querySelectorAll(".header-nav-list li")
+
+burgerelement.addEventListener("click",() => {
+    headernavlistelement.classList.toggle("nav-active");
+    headernavlistlielement.forEach((list,index) => {
+        if(list.style.animation) {
+            list.style.animation = ""
+        }
+        else {
+            list.style.animation = `navlist .5s ease forwards ${index / 7 + 0.7}s`
+        }
+    })
+    burgerelement.classList.toggle("toggle")
+})
 
 swiperslideelement = document.getElementById(`background-img1`);
 swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-1-A.jpg`);
@@ -24,6 +41,7 @@ window.onload = function () {
         loader.classList.add("loaded");
         notloader.classList.add("endloaded");
     }, 1200);
+    backgroundanimation()
 };
 
 swiper.on('slideChange', function () {
