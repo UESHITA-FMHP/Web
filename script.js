@@ -10,16 +10,22 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        1000: {
+            slidesPerView: 2,
+            parallax: false
+        }
+    }
 });
 
 const burgerelement = document.getElementById("burger");
 const headernavlistelement = document.getElementById("header-nav-list");
-const headernavlistlielement =document.querySelectorAll(".header-nav-list li")
+const headernavlistlielement = document.querySelectorAll(".header-nav-list li")
 
-burgerelement.addEventListener("click",() => {
+burgerelement.addEventListener("click", () => {
     headernavlistelement.classList.toggle("nav-active");
-    headernavlistlielement.forEach((list,index) => {
-        if(list.style.animation) {
+    headernavlistlielement.forEach((list, index) => {
+        if (list.style.animation) {
             list.style.animation = ""
         }
         else {
@@ -43,6 +49,20 @@ window.onload = function () {
     }, 1200);
     backgroundanimation()
 };
+
+window.addEventListener('resize', function () {
+    const backgroundimgelement = this.document.querySelectorAll(".background-img");
+    if (window.innerWidth < 1001) {
+        backgroundimgelement.forEach((list) => {
+            list.setAttribute('data-swiper-parallax-x', '0')
+        })
+    }
+    else {
+        backgroundimgelement.forEach((list) => {
+            list.setAttribute('data-swiper-parallax-x', '20%')
+        })
+    }
+})
 
 swiper.on('slideChange', function () {
     if (swiper.previousIndex < swiper.snapIndex && swiper.snapIndex < 4) {
