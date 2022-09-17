@@ -9,12 +9,6 @@ const swiper = new Swiper('.swiper', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        1000: {
-            slidesPerView: 2,
-            parallax: false
-        }
     }
 });
 
@@ -33,12 +27,14 @@ burgerelement.addEventListener("click", () => {
         }
     })
     burgerelement.classList.toggle("toggle")
-})
+});
 
 swiperslideelement = document.getElementById(`background-img1`);
 swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-1-A.jpg`);
 swiperslideelement = document.getElementById(`background-img2`);
 swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/account0125/Web-File/main/img-2-A.jpg`);
+swiperslideelement = document.getElementById(`background-img3`);
+swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/account0125/Web-File/main/img-3-A.jpg`);
 
 window.onload = function () {
     setTimeout(() => {
@@ -47,31 +43,16 @@ window.onload = function () {
         loader.classList.add("loaded");
         notloader.classList.add("endloaded");
     }, 1200);
-    backgroundanimation()
 };
 
-// window.addEventListener('resize', function () {
-//     const backgroundimgelement = this.document.querySelectorAll(".background-img");
-//     if (window.innerWidth < 1001) {
-//         backgroundimgelement.forEach((list) => {
-//             list.setAttribute('data-swiper-parallax-x', '0')
-//         })
-//     }
-//     else {
-//         backgroundimgelement.forEach((list) => {
-//             list.setAttribute('data-swiper-parallax-x', '20%')
-//         })
-//     }
-// })
-
 swiper.on('slideChange', function () {
-    if (swiper.previousIndex < swiper.snapIndex && swiper.snapIndex < 4) {
-        swiperslideelement = document.getElementById(`background-img${swiper.snapIndex + 2}`);
-        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 2}-A.jpg`);
+    if (swiper.previousIndex < swiper.snapIndex && swiper.snapIndex < 30) {
+        swiperslideelement = document.getElementById(`background-img${swiper.snapIndex + 3}`);
+        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 3}-A.jpg`);
     }
     else if (swiper.previousIndex > swiper.snapIndex && swiper.snapIndex > 2) {
-        swiperslideelement = document.getElementById(`background-img${swiper.snapIndex - 2}`);
-        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex - 2}-A.jpg`);
+        swiperslideelement = document.getElementById(`background-img${swiper.snapIndex - 3}`);
+        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex - 3}-A.jpg`);
     }
 });
 
