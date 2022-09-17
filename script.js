@@ -50,19 +50,19 @@ window.onload = function () {
     backgroundanimation()
 };
 
-window.addEventListener('resize', function () {
-    const backgroundimgelement = this.document.querySelectorAll(".background-img");
-    if (window.innerWidth < 1001) {
-        backgroundimgelement.forEach((list) => {
-            list.setAttribute('data-swiper-parallax-x', '0')
-        })
-    }
-    else {
-        backgroundimgelement.forEach((list) => {
-            list.setAttribute('data-swiper-parallax-x', '20%')
-        })
-    }
-})
+// window.addEventListener('resize', function () {
+//     const backgroundimgelement = this.document.querySelectorAll(".background-img");
+//     if (window.innerWidth < 1001) {
+//         backgroundimgelement.forEach((list) => {
+//             list.setAttribute('data-swiper-parallax-x', '0')
+//         })
+//     }
+//     else {
+//         backgroundimgelement.forEach((list) => {
+//             list.setAttribute('data-swiper-parallax-x', '20%')
+//         })
+//     }
+// })
 
 swiper.on('slideChange', function () {
     if (swiper.previousIndex < swiper.snapIndex && swiper.snapIndex < 4) {
