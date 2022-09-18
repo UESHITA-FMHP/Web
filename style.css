@@ -440,7 +440,7 @@ body {
         position: absolute;
         line-height: 10vh;
         line-height: 10dvh;
-        left: 10%;
+        left: 3vw;
         width: 40vw;
         font-size: 3.5vmin;
     }
@@ -449,10 +449,25 @@ body {
         position: absolute;
         top: 10vh;
         top: 10dvh;
-        left: 10%;
+        left: 3vw;
         width: 40vw;
         height: 70vh;
         height: 70dvh;
+        border-radius: 100px;
+        border: 10px solid #697c5f;
+    }
+
+    .rightspace {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 40vw;
+        height: 70vh;
+        height: 70dvh;
+        top: 17vh;
+        top: 17dvh;
+        right: 3vw;
         border-radius: 100px;
         border: 10px solid #697c5f;
     }
