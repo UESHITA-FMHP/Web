@@ -58,17 +58,32 @@ swiper.on('slideChange', function () {
 
 function imgopen() {
     imgpopupelement = document.getElementById("imgpopup");
-    imgpopupimgelement = document.getElementById("imgpopup-img")
-    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`)
-    imgpopupelement.style.visibility = "visible";
+    imgpopupimgelement = document.getElementById("imgpopup-img");
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
+    imgpopupelement.style.display = "block";
 };
 
-function answer() {
-    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-B.jpg`)
-    imgpopupelement.style.visibility = "visible";
-}
+function answerbtn() {
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-B.jpg`);
+    answerbtnelement = document.getElementById("answerbtn");
+    answerbtnelement.style.visibility = "hidden";
+    questionbtnelement = document.getElementById("questionbtn");
+    questionbtnelement.style.visibility = "visible";
+};
+
+function questionbtn() {
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
+    questionbtnelement = document.getElementById("questionbtn");
+    questionbtnelement.style.visibility = "hidden";
+    answerbtnelement = document.getElementById("answerbtn");
+    answerbtnelement.style.visibility = "visible";
+};
 
 function imgclose() {
     imgpopupelement = document.getElementById("imgpopup");
-    imgpopupelement.style.visibility = "hidden";
+    imgpopupelement.style.display = "none";
+    questionbtnelement = document.getElementById("questionbtn");
+    questionbtnelement.style.visibility = "hidden";
+    answerbtnelement = document.getElementById("answerbtn");
+    answerbtnelement.style.visibility = "visible";
 };
