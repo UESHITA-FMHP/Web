@@ -488,7 +488,9 @@ body {
         height: 100vh;
         height: 100dvh;
         font-size: 9vh;
+        font-size: 9dvh;
         letter-spacing: 2.2vh;
+        letter-spacing: 2.2dvh;
         color:rgb(123, 165, 114);
         user-select: none;
     }
@@ -496,18 +498,22 @@ body {
     .righttxt h1 {
         position: absolute;
         top: 20vh;
+        top: 20dvh;
         right: 0;
         transform-origin: 100% 100%;
         transform: rotate(-90deg) translate(18vh, 0);
+        transform: rotate(-90deg) translate(18dvh, 0);
         margin-right: 2rem;
     }
     
     .lefttxt h1 {
         position: absolute;
         top: 20vh;
+        top: 20dvh;
         left: 0;
         transform-origin: 0% 100%;
         transform: rotate(90deg) translate(14vh, 0);
+        transform: rotate(90deg) translate(14dvh, 0);
         margin-left: 2rem;
     }
 
