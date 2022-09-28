@@ -130,14 +130,19 @@ body {
     top:50dvh;
     right: 50vw;
     user-select: none;
-}
-
-.message h1 {
-    font-size: 2rem;
+    text-align: center;
     transform: translate(50%, -50%);
 }
 
+.message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
 
+.message a {
+    font-size: 1rem;
+    color: #000;
+}
 
 
 
