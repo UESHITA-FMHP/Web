@@ -174,6 +174,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 .imgslide {
     margin-top: 7vh;
     margin-top: 7dvh;
@@ -181,11 +188,34 @@ body {
     user-select: none;
 }
 
+.slide-title {
+    height: 8vh;
+    height: 8dvh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
 .slide-title h1 {
-    line-height: 13vh;
-    line-height: 13dvh;
     height: 30%;
     font-size: 3vmax;
+}
+
+.switch-btn {
+    height: 100%;
+    text-align: center;
+    line-height: 3vh;
+    line-height: 3dvh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.switch-btn a{
+    font-size: 0.8rem;
+    display: block;
+    padding: 0 4vw;
+    color: #000000;
 }
 
 .swiper {
