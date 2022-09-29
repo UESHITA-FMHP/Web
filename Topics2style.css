@@ -174,13 +174,6 @@ body {
 
 
 
-
-
-
-
-
-
-
 .imgslide {
     margin-top: 7vh;
     margin-top: 7dvh;
@@ -204,9 +197,9 @@ body {
 .switch-btn {
     height: 100%;
     text-align: center;
-    line-height: 3vh;
-    line-height: 3dvh;
-    margin-bottom: 2vh;
+    line-height: 4vh;
+    line-height: 4dvh;
+    margin-bottom: 1vh;
     display: flex;
     justify-content: center;
 }
