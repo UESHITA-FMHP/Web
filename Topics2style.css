@@ -14,6 +14,8 @@ html {
 
 body {
     width: 100%;
+    cursor: default;
+    cursor: url(https://raw.githubusercontent.com/account0125/Web-File/main/cursor-img.png),auto;
 }
 
 
@@ -204,10 +206,26 @@ body {
     justify-content: center;
 }
 
+.switch-btn-a {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.switch-btn-b {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.switch-btn img {
+    height: 5vh;
+    height: 5dvh;
+    object-fit: contain;
+}
+
 .switch-btn a{
+    
     font-size: 0.8rem;
     display: block;
-    padding: 0 4vw;
     color: #000000;
 }
 
@@ -291,6 +309,8 @@ body {
 .rightspace {
     display: none;
 }
+
+
 
 
 
