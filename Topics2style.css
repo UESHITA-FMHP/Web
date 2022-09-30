@@ -217,13 +217,13 @@ body {
 }
 
 .switch-btn img {
+    padding-right: .5rem;
     height: 5vh;
     height: 5dvh;
     object-fit: contain;
 }
 
 .switch-btn a{
-    
     font-size: 0.8rem;
     display: block;
     color: #000000;
