@@ -39,32 +39,32 @@ burgerelement.addEventListener("click", () => {
 });
 
 swiperslideelement = document.getElementById(`background-img1`);
-swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-1-A.jpg`);
+swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-1-A.jpg`);
 swiperslideelement = document.getElementById(`background-img2`);
-swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/account0125/Web-File/main/img-2-A.jpg`);
+swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-2-A.jpg`);
 swiperslideelement = document.getElementById(`background-img3`);
-swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/account0125/Web-File/main/img-3-A.jpg`);
+swiperslideelement.setAttribute('src', `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-3-A.jpg`);
 
 swiper.on('slideChange', function () {
     if (swiper.previousIndex < swiper.snapIndex && swiper.snapIndex < 30) {
         swiperslideelement = document.getElementById(`background-img${swiper.snapIndex + 3}`);
-        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 3}-A.jpg`);
+        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-${swiper.snapIndex + 3}-A.jpg`);
     }
     else if (swiper.previousIndex > swiper.snapIndex && swiper.snapIndex > 2) {
         swiperslideelement = document.getElementById(`background-img${swiper.snapIndex - 3}`);
-        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex - 3}-A.jpg`);
+        swiperslideelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-${swiper.snapIndex - 3}-A.jpg`);
     }
 });
 
 function imgopen() {
     imgpopupelement = document.getElementById("imgpopup");
     imgpopupimgelement = document.getElementById("imgpopup-img");
-    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
     imgpopupelement.style.display = "block";
 };
 
 function answerbtn() {
-    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-B.jpg`);
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-${swiper.snapIndex + 1}-B.jpg`);
     answerbtnelement = document.getElementById("answerbtn");
     answerbtnelement.style.visibility = "hidden";
     questionbtnelement = document.getElementById("questionbtn");
@@ -72,7 +72,7 @@ function answerbtn() {
 };
 
 function questionbtn() {
-    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/account0125/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
+    imgpopupimgelement.setAttribute("src", `https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/img-${swiper.snapIndex + 1}-A.jpg`);
     questionbtnelement = document.getElementById("questionbtn");
     questionbtnelement.style.visibility = "hidden";
     answerbtnelement = document.getElementById("answerbtn");
