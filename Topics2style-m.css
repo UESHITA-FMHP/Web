@@ -471,6 +471,14 @@ body {
         height: 80dvh;
     }
 
+    .slide-title h1 {
+        font-size: 2rem;
+    }
+
+    .swiper-slide-txt {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media screen and (max-width: 840px) {
@@ -583,14 +591,4 @@ body {
         margin-left: 2rem;
     }
 
-}
-
-@media screen and (min-width:1700px) {
-    .slide-title h1 {
-        font-size: 2rem;
-    }
-
-    .swiper-slide-txt {
-        font-size: 1.5rem;
-    }
 }
