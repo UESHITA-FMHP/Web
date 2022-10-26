@@ -135,7 +135,7 @@ body {
 }
 
 .header-nav-list a {
-    font-size: 70%;
+    font-size: .5rem;
     display: block;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -200,7 +200,7 @@ body {
 
 .slide-title h1 {
     height: 30%;
-    font-size: 3vmax;
+    font-size: 1.2rem;
 }
 
 .switch-btn {
@@ -234,7 +234,7 @@ body {
 }
 
 .switch-btn a{
-    font-size: 0.8rem;
+    font-size: .8rem;
     display: block;
     color: #000000;
     cursor: url(https://raw.githubusercontent.com/UESHITA-FMHP/Web-File/main/cursor-shita-chan.png),pointer;
@@ -274,7 +274,7 @@ body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    font-size: 2.5vmax;
+    font-size: 1rem;
 }
 
 .swiper-slide-title {
@@ -370,7 +370,7 @@ body {
 
 .answerbtn a{
     color:#000000;
-    font-size: 3vmin;
+    font-size: .7rem;
     text-decoration: none;
     width: 15vw;
     line-height: 5vh;
@@ -397,7 +397,7 @@ body {
 
 .questionbtn a {
     color:#000000;
-    font-size: 3vmin;
+    font-size: .7rem;
     text-decoration: none;
     width: 15vw;
     line-height: 5vh;
@@ -424,7 +424,7 @@ body {
 
 .closebtn a {
     color:#000000;
-    font-size: 3vmin;
+    font-size: .7rem;
     text-decoration: none;
     width: 15vw;
     line-height: 5vh;
@@ -451,6 +451,10 @@ body {
 
 
 @media screen and (max-width: 599px) {
+
+    html{
+        font-size: 15px;
+    }
 
     .swiper-button-prev {
         display: none;
@@ -507,7 +511,10 @@ body {
         line-height: 23.25vh;
         line-height: 23.25dvh;
         opacity: 0;
-        font-size: 3vmax;
+    }
+
+    .header-nav-list a{
+        font-size: 1rem;
     }
 
     .header-nav-list li:hover {
@@ -580,10 +587,10 @@ body {
 
 @media screen and (min-width:1700px) {
     .slide-title h1 {
-        font-size: 2vmax;
+        font-size: 2rem;
     }
 
     .swiper-slide-txt {
-        font-size: 1.6vmax;
+        font-size: 1.5rem;
     }
 }
