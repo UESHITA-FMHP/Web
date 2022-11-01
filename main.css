@@ -89,6 +89,10 @@ body {
     user-select: none;
 }
 
+.not-fake-login {
+    opacity: 0;
+}
+
 .card {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -194,15 +198,27 @@ body {
 
 
 
-.not-fake-login {
-    opacity: 0;
-}
+
 
 .fake-login-loaded {
-    transform: translate(-50%, -50%);
-    animation: fake-login-keyframe 3s linear;
-    transition: all 2s;
+    transition: all 1.2s;
     visibility: hidden;
+}
+
+.fake-login-loaded-card {
+    animation: fake-login-keyframe 3s linear forwards;
+}
+
+@keyframes fake-login-keyframe {
+    15% {
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .fake-login-endloaded {
@@ -210,18 +226,6 @@ body {
     transition: all 1.5s;
     transition-delay: .25s;
 }
-
-@keyframes fake-login-keyframe {
-    15% {
-        transform: translate(-50%, -50%) scale(2, 2);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
 
 
 
@@ -360,18 +364,72 @@ body {
 
     @keyframes fake-login-keyframe {
         15% {
-            transform: translate(-50%, -50%);
+            transform: scale(2, 2);
             opacity: 0;
         }
-
+    
         100% {
             opacity: 0;
+            visibility: hidden;
         }
     }
 
+    @keyframes navlist {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
 
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
+    .burger div {
+        display: block;
+        transition: all .5s ease-in-out;
+    }
 
+    .header-nav-list {
+        position: absolute;
+        right: 0;
+        height: 93vh;
+        height: 93dvh;
+        top: 7vh;
+        top: 7dvh;
+        background-color: #d6e9ca;
+        flex-direction: column;
+        width: 100vw;
+        transform: translateX(101%);
+        box-sizing: border-box;
+        border-top: 2px solid #abcf95;
+    }
 
+    .header-nav-list li {
+        line-height: 23.25vh;
+        line-height: 23.25dvh;
+        opacity: 0;
+    }
+
+    .header-nav-list a{
+        font-size: 1rem;
+    }
+
+    .header-nav-list li:hover {
+        background-color: #abcf95;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-405deg) translate(-2.5px, 9px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(405deg)translate(-2.5px, -9px);
+    }
 
 }
